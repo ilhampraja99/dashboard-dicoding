@@ -57,7 +57,7 @@ def create_late_delivery_df(df):
     late_delivery_df = df.groupby('is_late_delivery')['order_id'].nunique()
     return late_delivery_df
 
-all_df = pd.read_csv("dashboard/main_data.csv")
+all_df = pd.read_csv("main_data.csv")
 
 datetime_columns = ["order_date", "delivery_date"]
 all_df.sort_values(by="order_date", inplace=True)
